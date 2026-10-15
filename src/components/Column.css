@@ -1,0 +1,87 @@
+.column {
+  flex: 1;
+  min-width: 280px;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px 14px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.column-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.column-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.column-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e2e8f0;
+  letter-spacing: 0.3px;
+}
+
+.column-badge {
+  background: rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  border-radius: 20px;
+  padding: 2px 9px;
+  font-size: 13px;
+  font-weight: 500;
+  min-width: 24px;
+  text-align: center;
+}
+
+.card-list {
+  padding: 12px;
+  flex: 1;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background 0.15s;
+}
+
+.card-list.is-dragging-over {
+  background: rgba(124, 58, 237, 0.06);
+}
+
+.empty-column {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(148, 163, 184, 0.3);
+  font-size: 13px;
+  font-style: italic;
+  padding: 24px 0;
+  border: 2px dashed rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  min-height: 80px;
+}
+
+@media (max-width: 768px) {
+  .column {
+    max-width: 100%;
+    min-width: unset;
+    width: 100%;
+  }
+}
